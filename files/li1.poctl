@@ -1,0 +1,15 @@
+Po(X N(a&b))
+/*
+Po(X Po(X b))>-9
+Po(G Po(X (N a & N b & c)))<1
+Po(G Po(a U<=3 (b&c)))<1
+
+
+Po( X a & b & c )>-9
+Po(X Po(X b))>-9
+
+Po(aaa)>=9
+Po(aaa)<-1.20
+Po(aaa)<=1.8
+Po(aaa)==0
+*/

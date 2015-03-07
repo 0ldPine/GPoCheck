@@ -1,0 +1,23 @@
+GPKS
+
+Moudle  Thermostat                                                          
+	OFF:[0..0] init 0;
+	IDLE1:[0..0] init 0;
+	IDLE2:[0..0] init 0;
+	HEAT:[0..0] init 0;
+	AC:[0..0] init 0;
+
+	[] OFF=0 -> 1.0:IDLE1'=0;
+	[] IDLE1=0 -> 1:IDLE2'=0 + 1:AC'=0 + 1:HEAT'=0;
+	[] IDLE2=0 -> 1:AC'=0 + 1:HEAT'=0 + 1:OFF'=0 + 0.5:IDLE1'=0;
+	[] HEAT=0 -> 1:OFF'=0 + 1:IDLE2'=0;
+	[] AC=0 -> 1:OFF'=0 + 1:IDLE1'=0 + 1:IDLE2'=0;
+	
+	Label:[a,b,ac,r,h,idle1];
+	<OFF=0> a=0.5,b=0.5;
+	<IDLE1=0> r=1,b=0.5,a=0.5,idle1=1;
+	<IDLE2=0> r=1;
+	<HEAT=0> r=1,b=1,ac=0.5,h=1;
+	<AC=0> r=1,a=1,ac=1,h=0.5;
+	
+End Moudle

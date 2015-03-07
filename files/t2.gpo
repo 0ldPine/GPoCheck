@@ -1,0 +1,25 @@
+// this gpo file has some error!
+//this is comment
+#this is comment
+/*this also is comment
+*/
+gpks
+
+global int x = 0;
+global int y = 0;
+
+Moudle Model1
+	int x = 0;
+	y = 1;
+	[] x=0-> 0.8:(x'=0 + 0.4:(x'=1);
+	[] x=1& y!=2-> (x'=2);
+	[labelOne] x=2-> 0.5:(x'=2) + 0.5:(x'=0);
+End Moudle
+
+Moudle Model2
+	x = 1;
+	y = 1;
+	[] x=0-> 0.8:(x'=0) + 0.4:(x'=1);
+	[] x=1& y!=2-> (x'=2);
+	[labelOne] x=2-> 0.5:(x'=2) + 0.5:(x'=0);
+End Moudle

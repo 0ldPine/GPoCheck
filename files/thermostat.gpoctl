@@ -1,0 +1,12 @@
+/*
+Po(X idle1)
+*/
+Po(G Po(X idle1))
+Po(N h U b)
+Po(G Po(F N r))
+Po(G ( ac | h))
+Po(G (N a | N h))
+/*
+Po((N h & ac) U b)
+Po(N (h & ac) U b)
+*/
